@@ -10,4 +10,11 @@ augroup ansible_vim_fthosts
 augroup END
 ]], false)
 
+require('telescope').setup{
+  defaults = {
+    file_sorter =  require'telescope.sorters'.get_substr_matcher,
+    generic_sorter =  require'telescope.sorters'.get_substr_matcher,
+  }
+}
+
 return {}
